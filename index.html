@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/angular.js"></script>
+    <script src="client.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Movie Database</h1>
+    <main ng-controller="MovieController as vm">
+        <ul ng-repeat="movie in vm.movieArray">
+            <li>{{movie.title}}</li>
+            <img src="http://image.tmdb.org/t/p/w185{{movie.poster_path}}">
+        </ul>
+    </main>
+    
+</body>
+</html>
